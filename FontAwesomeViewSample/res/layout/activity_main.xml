@@ -11,10 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        
-        android:textSize="24sp"
+        android:text="\uF118"
         android:textColor="#ff000000"
-        android:text="\uf118" />
+        android:textSize="24sp" />
 
     <GridView
         android:id="@+id/activity_main_grid_view"

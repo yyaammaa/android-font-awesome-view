@@ -40,6 +40,15 @@ public class MainActivity extends Activity {
     return false;
   }
 
+  private static String convertToUnicode(String original) {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < original.length(); i++) {
+      sb.append(String.format("\\u%04X", Character.codePointAt(original, i)));
+    }
+    String unicode = sb.toString();
+    return unicode;
+  }
+
   private class IconAdapter extends BaseAdapter {
 
     private Context mContext;
@@ -91,8 +100,7 @@ public class MainActivity extends Activity {
 
       holder.mIconView.setText(entry.getValue());
       holder.mNameView.setText(entry.getKey());
-      // TODO: 表示する
-      holder.mUnicodeView.setText(entry.getValue());
+      holder.mUnicodeView.setText(convertToUnicode(entry.getValue()));
 
       return convertView;
     }
@@ -100,7 +108,6 @@ public class MainActivity extends Activity {
   }
 
   private static class ViewHolder {
-
     IconView mIconView;
     TextView mNameView;
     TextView mUnicodeView;
