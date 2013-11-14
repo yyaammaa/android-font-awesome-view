@@ -1,5 +1,5 @@
 
-package com.stackrmobile.awesomefont;
+package com.stackrmobile.fontawesomeview;
 
 import android.content.Context;
 import android.util.AttributeSet;
