@@ -7,6 +7,10 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.TextView;
 
+/**
+ * 使い方は普通のTextViewと同じです <br />
+ * 使用するプロジェクトのassets以下に fontawesome-webfont.ttf を置いてください
+ */
 public class IconView extends TextView {
 
   private static final String TAG = "IconView";

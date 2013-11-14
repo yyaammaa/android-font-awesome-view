@@ -28,13 +28,14 @@ public class MainActivity extends Activity {
     gridView.setAdapter(adapter);
 
     // \uF000 ~ \uF196
-    ArrayList<String> codeList = new ArrayList<String>();
+    // 参考: https://github.com/FortAwesome/Font-Awesome/blob/master/css/font-awesome.css
+    ArrayList<String> list = new ArrayList<String>();
     for (int i = 0xf000; i <= 0x0f196; i++) {
       String uninode = "\\u" + Integer.toHexString(i);
-      codeList.add(uninode);
+      list.add(uninode);
     }
 
-    adapter.setList(codeList);
+    adapter.setList(list);
   }
 
   @Override
@@ -44,10 +45,8 @@ public class MainActivity extends Activity {
 
   /**
    * Unicode文字列から元の文字列に変換する ("\u3042" -> "あ") <br />
+   * <br />
    * http://qiita.com/sifue/items/039846cf8415efdc5c92
-   * 
-   * @param unicode
-   * @return
    */
   private static String convertToOriginal(String unicode) {
     String[] codeStrs = unicode.split("\\\\u");
@@ -60,7 +59,6 @@ public class MainActivity extends Activity {
   }
 
   private class IconAdapter extends BaseAdapter {
-
     private Context mContext;
     private LayoutInflater mInflater;
     private ArrayList<String> mList;
