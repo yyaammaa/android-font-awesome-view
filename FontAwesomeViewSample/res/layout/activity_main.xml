@@ -19,7 +19,7 @@
         android:id="@+id/activity_main_grid_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:numColumns="3"
+        android:numColumns="4"
         android:stretchMode="columnWidth"
         tools:listitem="@layout/grid_view_item" />
 

@@ -14,14 +14,6 @@
         android:textSize="32sp" />
 
     <TextView
-        android:id="@+id/grid_view_icon_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ff000000"
-        android:textSize="12sp" />
-
-    <TextView
         android:id="@+id/grid_view_icon_unicode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
