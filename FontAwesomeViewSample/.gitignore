@@ -1,0 +1,7 @@
+/gen
+/bin
+/.project
+/.classpath
+.DS_Store
+
+/lint.xml
